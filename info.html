@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <link rel="stylesheet" href="./reservation.css" />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Lexend:wght@700&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Abhaya Libre:wght@700&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Amiko:wght@700&display=swap"
+  />
+  <title>Reservation Confirmation</title>
+</head>
+<body>
+  <div class="root">
+    <header class="navbar">
+      <div class="logo-wrapper">
+        <a href="home.html"><img src="img/logo.png" alt="Logo" class="logo" /></a>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="reservation.html">Reservation</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="reservation-link-wrapper">
+      <div class="reservation-link">
+        <h1 class="reservation1">Reservation Confirmation</h1>
+      </div>
+    </section>
+    <section class="reservation-form-wrapper">
+      <div class="reservation-form">
+        <h2>Your Reservation Details:</h2>
+        <p><strong>Name:</strong> <span id="confirmName"></span></p>
+        <p><strong>Phone No:</strong> <span id="confirmPhone"></span></p>
+        <p><strong>Email:</strong> <span id="confirmEmail"></span></p>
+        <p><strong>Date:</strong> <span id="confirmDate"></span></p>
+        <p><strong>From:</strong> <span id="confirmFrom"></span></p>
+        <p><strong>To:</strong> <span id="confirmTo"></span></p>
+        <p><strong>Total Guests:</strong> <span id="confirmGuests"></span></p>
+      </div>
+    </section>
+    <footer class="patel-utkarsh-wrapper">
+      <b class="patel-utkarsh">Patel Utkarsh</b>
+    </footer>
+  </div>
+  <script>
+    // Retrieve data from localStorage and display it
+    document.getElementById('confirmName').textContent = localStorage.getItem('name');
+    document.getElementById('confirmPhone').textContent = localStorage.getItem('phone');
+    document.getElementById('confirmEmail').textContent = localStorage.getItem('email');
+    document.getElementById('confirmDate').textContent = localStorage.getItem('date');
+    document.getElementById('confirmFrom').textContent = localStorage.getItem('from');
+    document.getElementById('confirmTo').textContent = localStorage.getItem('to');
+    document.getElementById('confirmGuests').textContent = localStorage.getItem('guests');
+  </script>
+</body>
+</html>

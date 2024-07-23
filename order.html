@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./order.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abhaya Libre:wght@700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiko:wght@700&display=swap" />
+</head>
+<body>
+    <div class="root">
+        <header class="reservation-contact">
+            <div class="home-wrapper">
+                <a href="home.html" style="color: azure; text-decoration: none;"><b class="home">Home</b></a>
+            </div>
+            <a href="shop.html" style="color: azure; text-decoration: none;"><b class="shop">Shop</b></a>
+            <a href="reservation.html" style="color: azure; text-decoration: none;"><b class="reservation">Reservation</b></a>
+            <a href="contact.html" style="color: azure; text-decoration: none;"><b class="contact">Contact</b></a>
+        </header>
+        <section class="order-link-wrapper">
+            <div class="order-link">
+                <h1 class="order1">Order</h1>
+            </div>
+        </section>
+        <section class="order-form-wrapper">
+            <div class="order-form">
+                <form id="orderForm" action="order-info.html" onsubmit="return handleOrderSubmit()">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Name here" required />
+
+                    <label for="phone">Phone No:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Phone no here (10 digit)" pattern="[0-9]{10}" required />
+
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" placeholder="Address here" required />
+
+                    <label for="dish">No of dish:</label>
+                    <input type="number" id="dish" name="dish" placeholder="1" min="1" max="50" required />
+
+                    <button type="submit">Confirm Order</button>
+                </form>
+            </div>
+        </section>
+        <footer class="patel-utkarsh-wrapper">
+            <b class="patel-utkarsh">Patel Utkarsh</b>
+        </footer>
+    </div>
+
+    <script>
+        function handleOrderSubmit() {
+            const form = document.getElementById("orderForm");
+            const formData = new FormData(form);
+            const urlParams = new URLSearchParams(formData).toString();
+            const orderInfoURL = `order-info.html?${urlParams}`;
+            window.location.href = orderInfoURL;
+            return false; // Prevent form submission
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./order-info.css">
+    <title>Order Information</title>
+</head>
+<body>
+    <div class="info-container">
+        <h2>Order Details</h2>
+        <div class="info-item">
+            <strong>Name:</strong> <span id="name"></span>
+        </div>
+        <div class="info-item">
+            <strong>Phone:</strong> <span id="phone"></span>
+        </div>
+        <div class="info-item">
+            <strong>Address:</strong> <span id="address"></span>
+        </div>
+        <div class="info-item">
+            <strong>No of Dish:</strong> <span id="dish"></span>
+        </div>
+        <button id="pay-button">Pay</button>
+    </div>
+
+    <script>
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name');
+        const phone = urlParams.get('phone');
+        const address = urlParams.get('address');
+        const dish = urlParams.get('dish');
+        const numOfDish = parseInt(urlParams.get('dish'), 10);
+
+        document.getElementById('name').textContent = name;
+        document.getElementById('phone').textContent = phone;
+        document.getElementById('address').textContent = address;
+        document.getElementById('dish').textContent = numOfDish;
+
+
+    </script>
+</body>
+</html>

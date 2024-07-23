@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    line-height: normal;
+  }
+  
+  :root {
+    /* fonts */
+    --font-amiko: Amiko;
+    --font-abhaya-libre: "Abhaya Libre";
+    --font-lexend: Lexend;
+  
+    /* font sizes */
+    --font-size-45xl: 64px;
+    --font-size-19xl: 38px;
+    --font-size-32xl: 51px;
+  
+    /* Colors */
+    --color-white: #fff;
+    --color-black: #000;
+  
+    /* Gaps */
+    --gap-xl: 20px;
+    --gap-48xl: 67px;
+    --gap-14xl: 33px;
+  
+    /* Paddings */
+    --padding-23xl: 42px;
+    --padding-xl: 20px;
+    --padding-12xs: 1px;
+    --padding-mini: 15px;
+    --padding-6xs: 7px;
+    --padding-79xl: 98px;
+    --padding-177xl: 196px;
+    --padding-58xl: 77px;
+
+  /* Border radiuses */
+  --br-26xl: 45px;
+}

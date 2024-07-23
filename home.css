@@ -1,0 +1,169 @@
+/* Base styles */
+body {
+    margin: 0;
+    font-family: 'Lexend', sans-serif;
+    background-color: #f8f9fa;
+}
+  
+.root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+  
+.navbar {
+    width: 100%;
+    background-color: #343a40;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    font-size: 1.2em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+  
+.logo-wrapper {
+    flex: 1;
+}
+  
+.logo {
+    height: 40px;
+    width: auto;
+}
+  
+nav {
+    flex: 3;
+}
+  
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+  
+.nav-links li a {
+    color: azure;
+    text-decoration: none;
+    font-weight: bold;
+}
+  
+.nav-links li a:hover {
+    text-decoration: underline;
+}
+  
+.home-link-wrapper {
+    width: 100%;
+    text-align: center;
+    background-color: #B6B7AB;
+    color: #fff;
+    padding: 2em 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+  
+.home-link h1 {
+    margin: 0;
+    font-family: 'Abhaya Libre', serif;
+    font-size: 2.5em;
+}
+  
+.hotel-info, .online-shop-info, .reservation-info {
+    display: flex;
+    align-items: center;
+    padding: 2em 0;
+    width: 90%;
+    margin: 0 auto;
+}
+  
+.hotel-text, .online-shop-text, .reservation-text {
+    flex: 1;
+    padding: 1em;
+}
+  
+.hotel-image, .online-shop-image, .reservation-image {
+    height: 250px;
+    width: 250px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+  
+.hotel-image img, .online-shop-image img, .reservation-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+  
+footer {
+    width: 100%;
+    background-color: #B5E6DD;
+    color: #000000;
+    text-align: center;
+    padding: 1em 0;
+}
+  
+.patel-utkarsh-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.patel-utkarsh {
+    font-family: 'Amiko', sans-serif;
+    font-size: 1.2em;
+}
+  
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .hotel-info, .online-shop-info, .reservation-info {
+        flex-direction: column;
+    }
+
+    .hotel-text, .online-shop-text, .reservation-text {
+        padding: 1em 0;
+    }
+
+    .hotel-image img, .online-shop-image img, .reservation-image img {
+        max-width: 70%;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-link h1 {
+        font-size: 2em;
+    }
+
+    .hotel-image img, .online-shop-image img, .reservation-image img {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links li {
+        display: block;
+        margin: 0.5em 0;
+    }
+
+    .nav-links li a {
+        font-size: 1em;
+    }
+
+    .home-link h1 {
+        font-size: 1.5em;
+    }
+
+    .hotel-image img, .online-shop-image img, .reservation-image img {
+        max-width: 100%;
+    }
+
+    footer {
+        font-size: 0.9em;
+    }
+}
